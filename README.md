@@ -82,3 +82,7 @@ In this case I'll update and then push and then pull from the other account.
 ```r
 renv::snapshot()
 ```
+
+### If you pull from the other project and restart R you will get a warning
+
+"The project may be out of sync". Then you can use `renv::status()` to get details. Here it's a tiny bit confusing but, in this case, you would use `renv::snapshot()` to use your current version of packages and you'd use `renv::restore()` to use the new lockfile
